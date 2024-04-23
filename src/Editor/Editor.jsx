@@ -17,7 +17,6 @@ class Editor extends PureComponent {
 
     selectedSizeFont = (e) => {
         this.setState({[e.target.name]: e.target.value})
-        console.log(e.target.name + '  ' + e.target.value)
 
     }
 
@@ -46,9 +45,9 @@ class Editor extends PureComponent {
                 } 
                 {
                     this.state.teletype === 'teletype' ? 
-                    <button name='teletype' value={''} onClick={this.selectedSizeFont}>f</button>
+                    <button name='teletype' value={''} onClick={this.selectedSizeFont}>Tt</button>
                     :
-                    <button name='teletype' value={'fantasy'} onClick={this.selectedSizeFont}>f</button>
+                    <button name='teletype' value={'fantasy'} onClick={this.selectedSizeFont}>Tt</button>
                 } 
                     
                     
@@ -67,7 +66,7 @@ class Editor extends PureComponent {
                     fontSize: this.state.fontSize + 'px',
                     color: this.state.color,
                     fontWeight: this.state.bold,
-                    fontFamily: {this.state.italic = '' ? this.state.italic : this.state.teletype},
+                    fontFamily: this.state.italic,
                     textDecoration: this.state.underline,
                     
                 }}>
