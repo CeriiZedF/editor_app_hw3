@@ -43,17 +43,6 @@ class Editor extends PureComponent {
                     :
                     <button name='underline' value={'underline'} onClick={this.selectedSizeFont}>U</button>
                 } 
-                {
-                    this.state.teletype === 'teletype' ? 
-                    <button name='teletype' value={''} onClick={this.selectedSizeFont}>Tt</button>
-                    :
-                    <button name='teletype' value={'fantasy'} onClick={this.selectedSizeFont}>Tt</button>
-                } 
-                    
-                    
-                    
-                
-              
                 <select name='fontSize' onChange={this.selectedSizeFont} >
                     <option value={18}>18</option>
                     <option value={24}>24</option>
